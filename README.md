@@ -13,7 +13,12 @@ Single comments are then given by a source reference and a comment, separated by
 
 ## Output: csv format ##
 
-Comments are written to standard output in `.csv` format with the comment 
+Comments are written to standard output in `.csv` format with the comment.
+
+
+## Test file ##
+
+A test file is included at `data/test1.txt`.  Running the script with this file should generate 12 lines of `.csv` output.
 
 
 
