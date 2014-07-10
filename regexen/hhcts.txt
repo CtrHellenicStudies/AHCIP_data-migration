@@ -1,0 +1,89 @@
+HHApollo = 0013.003
+HH3Apollo = 0013.003
+HH5Aphrodite = 0013.005 
+HHAphrodite = 0013.005
+HHAthena = 0013.028
+HHAthena28 = 0013.028
+HHDemeter = 0013.002
+HH2Demeter = 0013.002
+HHDione = HHDionysus?
+HH4Hermes = 0013.004 
+HHHermes = 0013.004
+HH7Dionysus = 0013.007
+HH24Hestia = 0013.024
+HH6 = 0013.006
+HH9 = 0013.009
+HH10 = 0013.010
+HH17 = 0013.017
+HH18 = 0013.018
+HH21 = 0013.021
+HH26 = 0013.026
+HH31 = 0013.031
+HH32 = 0013.032
+HH33 = 0013.033
+
+urn:cts:greekLit:tlg0013.tlg00
+
+Work:
+DFHN: n
+GNBA: slash in source, ff
+GNPH: comma
+LMAA: none
+LMME: comma, range, n
+
+LMMEHomHymns.csv DONE
+HH21
+HHAphrodite
+HHApollo
+HHDemeter
+HHDione
+HHHermes
+
+DFHNHomHymns.csv DONE
+HH17
+HH33
+HHAphrodite
+HHApollo
+HHAthena28
+HHDemeter
+
+GNBAHomHymns.csv DONE, needs / expansion
+HH24Hestia
+HHAphrodite
+HHApollo
+HHDemeter
+HHHermes
+
+GNPHHomHymns.csv DONE
+HH10
+HH18
+HH26
+HH2Demeter
+HH31
+HH32
+HH3Apollo
+HH4Hermes
+HH5Aphrodite
+HH6
+HH7Dionysus
+HH9
+
+LMAAHomHymns.csv DONE
+HHAphrodite
+HHDemeter
+HHHermes
+
+Notes:
+Aphrodite
+0013.005 (long)
+0013.006 (21 lines)
+0013.010 (6 lines)
+Athena
+0013.011 (WC 38)
+0013.028 (WC 114)
+Dionysus
+0013.001 (Fragmenta hymni in Bacchum, 20 lines), 0013.007 (In Bacchum ~60 lines), 0013.026 (In Bacchum, 13 lines)
+Demeter
+0013.002 (long), 0013.013 (tiny)
+Hermes
+0013.004 (long) or 0013.018 (short)

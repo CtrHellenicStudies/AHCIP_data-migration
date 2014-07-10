@@ -23,11 +23,32 @@ for (fName in args) {
   String currentPsg = ""
 
   f.eachLine { l ->
+
+    // Check for abbrevation of a new passage
+    // being commented on:
+
     if (l ==~ /I\..+/) {
+      // Iliad:
       currentPsg = l
+
+    } else if  (l ==~ /O\..+/) {
+      // Odyssey:
+      currentPsg = l
+
+      // expand to catch various forms of reference
+      // to Homeric Hymns ....
+
+
+
     } else {
+      // format data for a commentary entry as CSV
       if (l != "") {
+	// colon separates reference from commment:
 	String csv = l.replaceFirst(/:[ ]+/, ',"')
+	// semicolon separates classifcation of comment
+	// from text of comment:
+	csv = csv.replaceFirst(/;[ ]*/, '","')
+	// close quotation marks at end of line:
 	csv = csv.replaceFirst(/$/, '"')
 	println "${currentPsg},${csv}"
       }
