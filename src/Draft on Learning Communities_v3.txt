@@ -1,0 +1,39 @@
+1. When a person registers, there is a set of choices to make in the following sequence:
+ 
+            a) Do you wish to be an Explorer or a Certificate Student? An Explorer does not want evaluation, a Certificate Student does want evaluation, which includes self-evaluation, mentor-evaluation, and machine-evaluation.
+
+NOTE: You can drop from being a Certificate Student to an Explorer at any point, but you cannot change from being an Explorer to a Certificate Student.
+            b) Do you wish to work through the course materials on your own, or do you want to be part of a community of students who can work together and ask questions of each other and of the mentors? (Your choice here does _not_ depend on whether you are an Explorer or a Certificate Student.) 
+
+NOTE: You will have an opportunity after three weeks to change your mind about this choice.
+            c) If you want to interact with or simply be part of a community of students, would you prefer: 
+                         i.) to be assigned to a community that would interact with each other and mentors of the course, or 
+                         ii.) create your own community of fellow students with whom to interact more or less on your own? If so, please name your community and let us know within one week how to communicate with it, either by                                email or FB or some other means
+                         iii) join a community organized around a common interest or quality who would interact with mentors of the course and each other [here we will suggest a certain number of themes]
+
+NOTES: After three weeks, you will have an opportunity to change your mind about this choice. 
+Also, after two-three weeks, some students will be asked to serve as "moderators" (not "dominators") of the community based on their contributions to that point. 
+Also, after three weeks, please understand there will likely be consolidation and merging of some groups because of attrition. 
+ 
+2. On the size of the communities: we think that those who ask to be assigned to a community should number a maximum of around 1000 students (desirable) and have a minimum of 500 students (only through attrition). The other communities, those based on a theme and those organized by the students themselves, can be of any size, but we recommend that they have a minimum of 100 students.
+  
+3. If students register late and wish to be assigned to a community, they should be assigned randomly to the communities with the greatest attrition. BUT WE DO NOT REALLY UNDERSTAND WHAT "LATE" MEANS in this context. How late can students register? 
+ 
+4. The assigned communities should each be named after heroes and heroines. We will supply a list of 100 names of heroes and heroines -- that should do it, but if we get 200,000 students who want to be in communities, we will come up with more names!
+ 
+5. With regard to tools and posting, it should be possible for moderators and mentors to post messages to do the following things: 
+            a) send an email to ALL the students in the course (after approval by the whole team, to include Greg and Lenny)
+            b) post a single message to ALL the communities (after approval by the whole team, to include Greg and Lenny)
+            c) post a single message to a single community
+            d) post a single message to several communities (since some mentors may well be assigned more than one)
+            e) move a student out of one community into another, in special circumstances
+ 
+6. It should be possible to assign moderators to each community and also a mentor or mentors (to include alumni of the course, etc.). These people will be able to post messages only to the community/communities that they are responsible for. 
+
+7. Our goal is that annotation be fully integrated into the work of these learning communities. The discussion in them should take the form of date/time/author-stamped annotations to texts, so that the discussion is coherent and focused. We also want the users and the moderators and mentors to be able to _filter_ annotations, specifically: students and moderators can filter for their own annotations and those of moderators and mentors; mentors can filter for any student as well as themselves and the moderators.
+
+Those who seek to create their own community and who are also Certificate Students, and those who do not wish to participate in a community but are also Certificate Students, will both need a site where they can enter their annotations without being part of a community or sharing them with a community. 
+
+8. We would like students to be able to belong to multiple groups, so that they can see the annotations of different constituencies. As long as their annotations are being tracked by name and date and time, we can follow their intellectual trajectories and try to evaluate them. It might also be good to track annotations for the community in which they were entered, to see if there are changes that are detectable. 
+
+9. Functionality should be present for posts to receive “up” votes (Both “good question” and “good response”), and to be reported to moderators (flagged as abuse or spam; e.g. “Report this post”). As a corollary to this, forum moderators (i.e. instructor staff) should have superuser powers that include the ability to remove/hide posts, expel abusive members or spammers from the forums, and be able to “up-vote” posts in such a way that their vote counts differently from students/regular users. Case use for the latter: we would like to be able to post, for example, 20 homework responses from students, and have the student body as a whole vote for the “best” or most correct responses, while simultaneously allowing for the teaching staff to vote separately on the same sample. The results – specifically, how the students’ perspective of correctness compares to the teaching staff’s perspective – will be very valuable pedagogically, as it will allow the teaching staff to see what is and is not being understood within the course, and therefore to focus their attention in the appropriate direction(s).

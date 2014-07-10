@@ -1,0 +1,74 @@
+Leonard Muellner, The Meaning of Homeric EYXOMAI through its Formulas (1976)
+
+On the Homeric Hymns
+
+HHApollo.237
+ME 44: quoted; in a list of examples of eukhesthai + dative (formulas which report prayers)
+ME 48: quoting part of the verses; analysis of the enjambed attestations of 
+#[eukh– –] with dative
+ME 59: quoted; analysis of the attestations of sacral eukhesthai in the present tense and comparison of variant formulas with eukhetasthai for eukhesthai in formulas with enjambed, present tense, sacral eukhesthai, in the context of analyzing Allen’s text of I.08.526
+
+HHApollo.275
+ME 64: quoted; analysis of instances of eukhesthai + aorist infinitive
+
+HHApollo.370
+ME 23: quoted; this verse as a variant, with epeukhesthai, to (A6) and (A7) (which have eukhesthai) where the dictional bonds tying together (A1)-(A5) are shattered, i.e. they resume the narrative not after prayers but boasts
+
+HHApollo.385-386
+ME 59: quoted; analysis of the attestations of sacral eukhesthai in the present tense and comparison of variant formulas with eukhetasthai for eukhesthai in formulas with enjambed, present tense, sacral eukhesthai, in the context of analyzing Allen’s text of I.08.526
+
+HHApollo.440
+ME 105: quoted and translated; analysis of the meaning and uses of piphauskesthai (in the context of analyzing the semantic and formal confusion of piphaskein and piphauskesthai), in this verse as ‘show, reveal’
+
+HHApollo.452
+ME 124n58: reference; example of the pairing of question and answer regarding identity (between man and god) in Ancient Greek that matches the Avestan model
+
+HHApollo.468
+ME 124n59: reference; comparison of Greek formulas for asking a person’s identity with Avestan and Indic parallels, as well as genos eukhesthai einai formulas
+
+HHApollo.470
+ME 72: reference; on the grammatical constraints, here the one instance outside of the present, in the context of analyzing genos eukhesthai einai formulas
+ME 124n58: reference; example of the pairing of question and answer regarding identity (between man and god) in Ancient Greek that matches the Avestan model
+
+HHApollo.480
+ME 69: quoted; in a list of attestations of genos eukhesthai einai and its transformations
+ME 75n9: quoted; one of the three places where the convention of naming-statements to omit one’s own name is broken
+ME 124n59: reference; comparison of Greek formulas for asking a person’s identity with Avestan and Indic parallels, and here specifically the answers to such questions (genos eukhesthai einai formulas), and their demonstrating that such usages can be inherited phenomena
+
+HHApollo.490
+ME 124n59: reference; comparison of Greek formulas for asking a person’s identity with Avestan and Indic parallels, as well as genos eukhesthai einai formulas
+
+HHApollo.495
+ME 45: quoted; in a list of attestations of eukhesthai + dative in sacral contexts, in the subcategory of anomalous attestations (isolated metrical position of eukhesthai)
+ME 48-49: references; anomaly of the formula in this verse, namely, the complement to eukhomai is not a noun (e.g. name of divinity) but a pronoun, but this as one of the instances where the antecedent of the pronoun is Apollo
+
+HHAphrodite.007
+ME 64: quoted; analysis of instances of eukhesthai + aorist infinitive
+
+HHAphrodite.140
+ME 102n11: reference; apoina as object of dekhesthai, in the context of analyzing I.18.499-500 (litigation scene on the Shield), and Corlu, Benveniste, and Chantraine
+
+HHAphrodite.242
+ME 120n41: reference; analysis of the development of Greek posis compared with Vedic pati-
+
+HHAphrodite.284
+ME 78n20: quoted; in a list of examples of the functional relationship between eukhesthai and phanai (in the context of analyzing genos eukhesthai einai formulas)
+
+HHDemeter.299
+ME 37, 38n54: quoting part of the verse (p. 37), reference; demonstrating that kluein has no sacral connotations while eukhomenoio/euxamenoio does, in the context of the analysing kluein + eukhesthai formulas
+
+HHDione.028
+ME 61: reference; switch from Dii patri to Dii t’alloisin te theoisin attested with a variation of the || (short OR two shorts) euxamenos Dii patri # formula which uses epeukhesthai instead of eukhesthai, in the context of analyzing Allen’s text at I.08.526 vs. Zenodotus’s version of the verse (regarding elpomenos || in Allen’s text and # elpomai, Zenodotus’ reading, occurring as in this verse)
+
+HHHermes.214
+ME 51n68: reference; comment on the only other three figures besides Hector for whom descent from Zeus is given, in the context of analyzing the only place in the Homeric corpus where a dative noun after eukhesthai is not a god/gods (but Hektor, and references to his ‘godhead’)
+
+HHHermes.230
+ME 51n68: reference; comment on the only other three figures besides Hector for whom descent from Zeus is given, in the context of analyzing the only place in the Homeric corpus where a dative noun after eukhesthai is not a god/gods (but Hektor, and references to his ‘godhead’)
+
+HHHermes.378
+ME 69: quoted; in a list of attestations of genos eukhesthai einai and its transformations
+ME 72, 72n6: reference; on the grammatical constraints, here regarding the use of the second person and fathers eukhomenoi about their sons, in the context of analyzing genos eukhesthai einai formulas
+
+HH21.3f.
+ME 128: quoting part of the verse; analysis of the figura etymologica ‘eukhomenos epos ēuda’ in Homeric Greek and comparison of the figure in Indo-Iranian (Bartholomae’s 1887 texts cited in a comparison)
