@@ -1,6 +1,6 @@
-#homcom#
+#AHCIP_data-migration#
 
-**Summary**:  Converting source data for CHS Homer Commentary from streaming format to tabular format suitable for use in a CITE Collection. 
+**Summary**:  Converting source data for CHS "A Homer Commentary in Progress" (AHCIP) from streaming format to tabular format suitable for use in a CITE Collection. 
 
 Source data (in the "streaming format" documented below) is first flattened to a simple `csv` file.  The simple `csv` file is then expanded with a citable URN for each comment, and modified by reformatting references to passages commented on as CTS URNs.
 
@@ -19,7 +19,7 @@ Source data (in the "streaming format" documented below) is first flattened to a
 
 Plain-text input files are formatted as follows:
 
-Annotations on a given passage of the *Iliad* begin with a reference to the *Iliad* passage on a single line.  Lines beginning with the string `I.` are assumed to be *Iliad* references;  lines begining  with the string `O.` are assumed to be *Odyssey* references.  The file `regexen/hhcts.txt` contains a complete list of the different forms of reference Ryan Baumann found for commentary on Homeric Hymns.
+Annotations on a given passage of the *Iliad* begin with a reference to the *Iliad* passage on a single line.  Lines beginning with the string `I.` are assumed to be *Iliad* references;  lines beginning  with the string `O.` are assumed to be *Odyssey* references.  The file `regexen/hhcts.txt` contains a complete list of the different forms of reference Ryan Baumann found for commentary on Homeric Hymns.
 
 Following the identification of a passage, one or more entries are then given on a single line each.  Each entry consists of a source reference and a comment, separated by a colon.  It is assumed that comments may contain any character except a quotation mark.  Comments begin with a classifying note separated from the rest of the comment by a semicolon.
 
