@@ -1,13 +1,13 @@
+// -*- mode: Java; -*-
+
 /*
 
-Convert data for Homer Commentary from streaming format to 
-tabular format.
+Convert data for Homer Commentary from streaming format to tabular format.
 
-See further details at https://github.com/neelsmith/homcom
+See further details at https://github.com/CtrHellenicStudies/AHCIP_data-migration
 
 Usage: groovy streamToTab.groovy <FILES>
  
-
 */
 
 
@@ -35,25 +35,41 @@ for (fName in args) {
       // Odyssey:
       currentPsg = l
 
-      // expand to catch various forms of reference
-      // to Homeric Hymns ....
+      // Homeric Hymns:
+    } else if (l ==~ /HH[A-Za-z0-9]+\..+/) {
+	currentPsg = l
 
-
+	// expand here if there are other passage abreviations
+	// to be handled.
 
     } else {
-      // format data for a commentary entry as CSV
-      if (l != "") {
-	// colon separates reference from commment:
-	String csv = l.replaceFirst(/:[ ]+/, ',"')
-	// semicolon separates classifcation of comment
-	// from text of comment:
-	csv = csv.replaceFirst(/;[ ]*/, '","')
-	// close quotation marks at end of line:
-	csv = csv.replaceFirst(/$/, '"')
-	println "${currentPsg},${csv}"
-      }
+	
+	// To skip over introductory notes at the top of the file, don't
+	// start processing output lines until we hit the first
+	// valid passage line (rbj 2014-07-11)
+
+	if ( currentPsg != "" ) {
+
+	    if (l != "") {
+		// convert line to a CSV commentary line
+		
+		// colon separates reference from commment:
+		String csv = l.replaceFirst(/:[ ]+/, ',"')
+		
+		// semicolon separates classification of comment
+		// from text of comment:
+		csv = csv.replaceFirst(/;[ ]*/, '","')
+		
+		// close quotation marks at end of line:
+		csv = csv.replaceFirst(/$/, '"')
+
+		// prepend the passage abbreviation for the first column
+		println "${currentPsg},${csv}"
+	    }
+	}
     }
   }
 }
+
 
 
