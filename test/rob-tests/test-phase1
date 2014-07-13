@@ -11,7 +11,8 @@ P1ODIR="phase1-output"
 CONVSCRIPT="../../scripts/streamToTab.groovy"
 
 # Make sure we can run it
-if [ (which groovy >/dev/null) -ne 0 ]; then
+which groovy >/dev/null 2>&1
+if [ $? -ne 0 ]; then
     echo "You must install Groovy or put it in your path to run these tests."
     exit 1
 fi
@@ -21,12 +22,14 @@ if [ ! -f ${CONVSCRIPT} ]; then
     exit 1
 fi
 
+rm ${P1ODIR}/*
+
 counter=0
 
 for srcfile in `ls $SRCDIR`
 do
-    targfile="${P1ODIR}/`basename ${srcfile}`.p1o.csv"
-    groovy ${CONVSCRIPT} $srcfile > $targfile
+    targfile="${P1ODIR}/${srcfile}.p1o.csv"
+    groovy ${CONVSCRIPT} ${SRCDIR}/${srcfile} > ${targfile}
     counter=`expr 1 + $counter` 
 done
 
