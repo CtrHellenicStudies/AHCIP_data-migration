@@ -22,7 +22,11 @@ if [ ! -f ${CONVSCRIPT} ]; then
     exit 1
 fi
 
-rm ${P1ODIR}/*
+if [ -d ${P1ODIR} ]; then
+    rm ${P1ODIR}/*
+else
+    mkdir -p ${P1ODIR}
+fi
 
 counter=0
 

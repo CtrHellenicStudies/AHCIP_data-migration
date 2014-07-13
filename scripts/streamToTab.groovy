@@ -26,21 +26,24 @@ for (fName in args) {
 
     // Check for abbrevation of a new passage
     // being commented on:
-
+	       
+    // Iliad:
+    // References look like I.#.###
     if (l ==~ /I\..+/) {
-      // Iliad:
-      currentPsg = l
-
+	currentPsg = l
+	
+    // Odyssey:
+    // References look like O.#.###	
     } else if  (l ==~ /O\..+/) {
-      // Odyssey:
-      currentPsg = l
-
-      // Homeric Hymns:
-    } else if (l ==~ /HH[A-Za-z0-9]+\..+/) {
 	currentPsg = l
 
-	// expand here if there are other passage abreviations
-	// to be handled.
+    // Homeric Hymns:
+    //  References look like HHApollo.### or HH24Hestia.### or HH6.### or just HH.##
+    } else if (l ==~ /HH[A-Za-z0-9]*\..+/) {
+	currentPsg = l
+
+    // expand here if there are other passage abreviations
+    // to be handled.
 
     } else {
 	
