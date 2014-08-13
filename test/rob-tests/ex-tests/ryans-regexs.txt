@@ -7,9 +7,9 @@
 ### Stray Test or we got cut off
 ^O[\/\-.0-9]\+
 
-### \{-\} matches 0 or more of the preceding atom, as few as possible
+### \{-} matches 0 or more of the preceding atom, as few as possible
 ### \{-n,m} matches at least n and as many as m of the preceding as few as possible
-
+### \_. matches any single character or end of line
 
 s/\(^O[\/\-.0-9]\+\)\(\_.\{-\}\)\(^O[\/\-.0-9]\+\)\@<!\(^BA\)/\1\2\1\r\4/
 s/^\(O\..\{-}\)\_.\(^BA\ [ ,0-9\\-].\{-}\): \(.\{-}\); \(.*\)$/"\1","\2","\3","\4"/
@@ -18,65 +18,107 @@ s/\(^O[\/\-.0-9]\+\)\(\_.\{-\}\)\(O\..\{-}\n\)\@<!\(^BA\)/\1\2\1\r\4/
 %s/\(^O[\/\-.0-9]\+\)\n\(^BA.\{-}\)\n\(^BA\)/\1\r\2\r\1\r\3/
 
 # Homeric Hymns
+### Skip this one, done by Groovy script
 %s/\(^HH.\{-}\)\n\(^HN.\{-}\)\n\(^HN\)/\1\r\2\r\1\r\3/
+### Skip this one, done by Groovy script
 %s/^\(HH.\{-}\)\_.\(^HN\ [ ,0-9n\\-].\{-}\): \(.\{-}\); \(.*\)$/"\1","\2","\3","\4"/
 
+### Skip this one, done by Groovy script
 %s/\(^HH.\{-}\)\n\(^BA.\{-}\)\n\(^BA\)/\1\r\2\r\1\r\3/
+### Skip this one, done by Groovy script
 %s/^\(HH.\{-}\)\_.\(^BA\ [ ,0-9n\\-].\{-}\): \(.\{-}\); \(.*\)$/"\1","\2","\3","\4"/
 
+### Skip this one, done by Groovy script
 %s/\(^HH.\{-}\)\n\(^PH.\{-}\)\n\(^PH\)/\1\r\2\r\1\r\3/
+### Skip this one, done by Groovy script
 %s/^\(HH.\{-}\)\_.\(^PH\ [ ,0-9n\\-].\{-}\): \(.\{-}\); \(.*\)$/"\1","\2","\3","\4"/
 
+### Skip this one, done by Groovy script
 %s/\(^HH.\{-}\)\n\(^AA.\{-}\)\n\(^AA\)/\1\r\2\r\1\r\3/
+### Skip this one, done by Groovy script
 %s/^\(HH.\{-}\)\_.\(^AA\ [ ,0-9n\\-].\{-}\): \(.\{-}\); \(.*\)$/"\1","\2","\3","\4"/
 
+### Skip this one, done by Groovy script
 %s/\(^HH.\{-}\)\n\(^ME.\{-}\)\n\(^ME\)/\1\r\2\r\1\r\3/
+### Skip this one, done by Groovy script
 %s/^\(HH.\{-}\)\_.\(^ME\ [ ,0-9n\\-].\{-}\): \(.\{-}\); \(.*\)$/"\1","\2","\3","\4"/
 
 # Iliad
+### Skip this one, done by Groovy script
 %s/\(^I[\/\-.0-9]\+\)\n\(^HN.\{-}\)\n\(^HN\)/\1\r\2\r\1\r\3/
+### Skip this one, done by Groovy script
 %s/^\(I\..\{-}\)\_.\(^HN\ [ ,0-9n\\-].\{-}\): \(.\{-}\); \(.*\)$/"\1","\2","\3","\4"/
 
+### Skip this one, done by Groovy script
 %s/\(^I[\/\-.0-9]\+\)\n\(^BA.\{-}\)\n\(^BA\)/\1\r\2\r\1\r\3/
+### Skip this one, done by Groovy script
 %s/^\(I\..\{-}\)\_.\(^BA\ [ ,0-9n\\-].\{-}\): \(.\{-}\); \(.*\)$/"\1","\2","\3","\4"/
 
+### Skip this one, done by Groovy script
 %s/\(^I\..\{-}\)\n\(^HC.\{-}\)\n\(^HC\)/\1\r\2\r\1\r\3/
+### Skip this one, done by Groovy script
 %s/^\(I\..\{-}\)\_.\(^HC\ [PC ,0-9n\\-].\{-}\): \(.\{-}\); \(.*\)$/"\1","\2","\3","\4"/
 
+### Skip this one, done by Groovy script
 %s/\(^I[\/\-.0-9]\+\)\n\(^PH.\{-}\)\n\(^PH\)/\1\r\2\r\1\r\3/
+### Skip this one, done by Groovy script
 %s/^\(I\..\{-}\)\_.\(^PH\ [ ,0-9n\\-].\{-}\): \(.\{-}\); \(.*\)$/"\1","\2","\3","\4"/
 
+### Skip this one, done by Groovy script
 %s/\(^I[\/\-.0-9]\+\)\n\(^AA.\{-}\)\n\(^AA\)/\1\r\2\r\1\r\3/
+### Skip this one, done by Groovy script
 %s/^\(I\..\{-}\)\_.\(^AA\ [ ,0-9n\\-].\{-}\): \(.\{-}\); \(.*\)$/"\1","\2","\3","\4"/
 
+### Skip this one, done by Groovy script
 %s/\(^I[\/\-.0-9]\+\)\n\(^ME.\{-}\)\n\(^ME\)/\1\r\2\r\1\r\3/
+### Skip this one, done by Groovy script
 %s/^\(I\..\{-}\)\_.\(^ME\ [ ,0-9n\\-].\{-}\): \(.\{-}\); \(.*\)$/"\1","\2","\3","\4"/
 
 # Odyssey
+### Skip this one, done by Groovy script
 %s/\(^O[\/\-.0-9]\+\)\n\(^HC.\{-}\)\n\(^HC\)/\1\r\2\r\1\r\3/
+### Skip this one, done by Groovy script
 s/^\(O\..\{-}\)\_.\(^HC\ [PC ,0-9\\-].\{-}\): \(.\{-}\); \(.*\)$/"\1","\2","\3","\4"/
 
+### Skip this one, done by Groovy script
 %s/\(^O[\/\-.0-9]\+\)\n\(^PH.\{-}\)\n\(^PH\)/\1\r\2\r\1\r\3/
+### Skip this one, done by Groovy script
 s/^\(O\..\{-}\)\_.\(^PH\ [ ,0-9\\-].\{-}\): \(.\{-}\); \(.*\)$/"\1","\2","\3","\4"/
 
+### Skip this one, done by Groovy script
 %s/\(^O[\/\-.0-9]\+\)\n\(^AA.\{-}\)\n\(^AA\)/\1\r\2\r\1\r\3/
+### Insert the quotation marks, done by Groovy script
 s/^\(O\..\{-}\)\_.\(^AA\ [ ,0-9\\-].\{-}\): \(.\{-}\); \(.*\)$/"\1","\2","\3","\4"/
 
+### Skip this one, done by Groovy script
 %s/\(^O[\/\-.0-9]\+\)\n\(^ME.\{-}\)\n\(^ME\)/\1\r\2\r\1\r\3/
+### Skip this one, done by Groovy script
 s/^\(O\..\{-}\)\_.\(^ME\ [ ,0-9\\-].\{-}\): \(.\{-}\); \(.*\)$/"\1","\2","\3","\4"/
 
-# split slash references into multiple
-s/^"\(O\.\d\+\.\)\([\-0-9]\+\)\/\([\-0-9]\+\)\(.*\)/"\1\2\4\r"\1\3\4/
-s/^"\(I\.\d\+\.\)\([\-0-9]\+\)\/\([\-0-9]\+\)\(.*\)/"\1\2\4\r"\1\3\4/
 
+# split slash references into multiple
+### Note -- must recurse until no matches
+### For Odyssey lines
+s/^"\(O\.\d\+\.\)\([\-0-9]\+\)\/\([\-0-9]\+\)\(.*\)/"\1\2\4\r"\1\3\4/
+### For Iliad lines
+s/^"\(I\.\d\+\.\)\([\-0-9]\+\)\/\([\-0-9]\+\)\(.*\)/"\1\2\4\r"\1\3\4/
+### Does this line match anything??? It doesn't work for Homeric Hymns
+### We need to write one for Homeric Hymns
 s/^"\(.\{-}:\)\([\-0-9]\+\)\/\([\-0-9]\+\)\(.*\)/"\1\2\4\r"\1\3\4/
 
 # strip leading zeros
+### Next two for Odyssey lines
 s/^"O\.0*\([\-0-9]\{-}\)\.0*\([\-0-9]\{-}\)"/"O.\1.\2"/
 s/^"O\.0*\([0-9]\{-}\)\.0*\([0-9]\{-}\)-0*\([0-9]\{-}\)"/"O.\1.\2-\3"/
+### Next two for Iliad lines
 s/^"I\.0*\([\-0-9]\{-}\)\.0*\([\-0-9]\{-}\)"/"I.\1.\2"/
 s/^"I\.0*\([0-9]\{-}\)\.0*\([0-9]\{-}\)-0*\([0-9]\{-}\)"/"I.\1.\2-\3"/
+### Need to write for Homeric Hymns
+
+
 # split comma references into multiple
+### Note -- must recurse until no matches
+### Comma references in the commentary lines
 s/\(.\{-}\)\(,"BA [#\-0-9]\+\), \([#\-0-9]\+\)\(.*\)/\1\2\4\r\1,"BA \3\4/
 %s/\(.\{-}\)\(,"HN [n#\-0-9]\+\), \([n#\-0-9]\+\)\(.*\)/\1\2\4\r\1,"HN \3\4/
 %s/\(.\{-}\)\(,"HC \d.\{-}\), \(\d.\{-}\)\(".*\)/\1\2\4\r\1,"HC \3\4/
@@ -85,6 +127,7 @@ s/\(.\{-}\)\(,"BA [#\-0-9]\+\), \([#\-0-9]\+\)\(.*\)/\1\2\4\r\1,"BA \3\4/
 %s/\(.\{-}\)\(,"PH [n#\-0-9]\+\), \([n#\-0-9]\+\)\(.*\)/\1\2\4\r\1,"PH \3\4/
 %s/\(.\{-}\)\(,"AA [n#\-0-9]\+\), \([n#\-0-9]\+\)\(.*\)/\1\2\4\r\1,"AA \3\4/
 %s/\(.\{-}\)\(,"ME [n#\-0-9]\+\), \([n#\-0-9]\+\)\(.*\)/\1\2\4\r\1,"ME \3\4/
+
 
 # change footnotes to fragments
 %s/\(,"HN \d\+\)n\(\d\+"\)/\1#\2/
