@@ -54,20 +54,24 @@ for (fName in args) {
 	if ( currentPsg != "" ) {
 
 	    if (l != "") {
-		// convert line to a CSV commentary line
+		// convert line to a valid CSV commentary line
+
+		// Need to surround the first token, the commentary source reference, with
+		// double quotation marks:
+		
+		String csv = '"' + l
 		
 		// colon separates reference from commment:
-		String csv = l.replaceFirst(/:[ ]+/, ',"')
+		csv = csv.replaceFirst(/:[ ]+/, '","')
 		
-		// semicolon separates classification of comment
-		// from text of comment:
+		// semicolon separates classification of comment from text of comment:
 		csv = csv.replaceFirst(/;[ ]*/, '","')
 		
 		// close quotation marks at end of line:
 		csv = csv.replaceFirst(/$/, '"')
 
 		// prepend the passage abbreviation for the first column
-		println "${currentPsg},${csv}"
+		println "\"${currentPsg}\",${csv}"
 	    }
 	}
     }
