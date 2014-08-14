@@ -1,0 +1,40 @@
+#! /bin/bash
+#
+# Set up the working files in this directory, updating
+# in case something has changed.
+#################################################
+
+if [ -d ../../src ]; then
+    cat ../../src/*.txt > all-src-lines.txt
+else
+    echo "Error! Where are the source files?"
+fi
+
+if [ -d ../../csv ]; then
+    cat ../../csv/*.csv > all-csv-lines.txt
+else
+    echo "Error! Where are the CSV files?"
+fi
+
+if [ -d ../../cite ]; then
+    cat ../../cite/*.csv > all-cite-lines.txt
+else
+    echo "Error! Where are the CSV files with URNs?"
+fi
+
+generate=1
+if [ -d ../test-groovy-script/phase1-output ]; then
+    ls ../test-groovy-script/phase1-output/*.csv >/dev/null 2>&1
+    if [ $? -eq 0 ]; then
+	generate=0
+    fi
+fi
+
+if [ $generate == 1 ]; then
+    pushd ../test-groovy-script
+    ./test-phase1
+    popd
+fi
+
+cat ../test-groovy-script/phase1-output/*.csv > all-p1o-lines.txt
+
