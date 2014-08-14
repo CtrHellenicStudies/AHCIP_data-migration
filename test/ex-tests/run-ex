@@ -10,7 +10,7 @@
 
 SRCFILE="all-p1o-lines.txt"
 TARGET="after-p2.txt"
-REGEXFILES="hn-hh-refs.ex set-source-urn.ex"
+REGEXFILES="set-source-urn.ex"
 BACKUPS="backup-results"
 
 if [ ! -d ${BACKUPS} ]; then
