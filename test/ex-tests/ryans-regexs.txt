@@ -463,15 +463,19 @@ HHHermes
 
 Notes:
 Aphrodite
-0013.005 (long)
-0013.006 (21 lines)
-0013.010 (6 lines)
+    0013.005 (long)
+    0013.006 (21 lines)
+    0013.010 (6 lines)
 Athena
-0013.011 (WC 38)
-0013.028 (WC 114)
+    0013.011 (WC 38)
+    0013.028 (WC 114)
 Dionysus
-0013.001 (Fragmenta hymni in Bacchum, 20 lines), 0013.007 (In Bacchum ~60 lines), 0013.026 (In Bacchum, 13 lines)
+    0013.001 (Fragmenta hymni in Bacchum, 20 lines)
+    0013.007 (In Bacchum ~60 lines)
+    0013.026 (In Bacchum, 13 lines)
 Demeter
-0013.002 (long), 0013.013 (tiny)
+    0013.002 (long)
+    0013.013 (tiny)
 Hermes
-0013.004 (long) or 0013.018 (short)
+    0013.004 (long)
+    0013.018 (short)
