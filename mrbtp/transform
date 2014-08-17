@@ -1,0 +1,90 @@
+#! /bin/bash
+#  -*- mode: Shell; -*-
+#
+#######################################################
+#
+# MRBTP = Modified Ryan Baumann Transformation Process
+#
+# Script to convert a CSV file created from a stream
+#  file to an AHCIP ingest input file with proper
+#  CTS URNs. This is done with a set of ex files
+#  that modify a copy of the input file.
+#
+#################################################
+
+#################
+# CONFIGURATION #
+#################
+BACKUPDIR="transform-backups"
+# Set this to the largest number of slashes we
+# might find in the input source references
+MAXSLASHES=1
+
+#############
+# FUNCTIONS #
+#############
+
+# If $OUTPUT exists, save a copy in $BACKUPDIR
+backup_output_file () {
+    if [ ! -d ${BACKUPDIR} ]; then
+        mkdir -p ${BACKUPDIR}
+    fi
+    
+    if [ -f $OUTPUT ]; then
+	cp -p ${OUTPUT} `date "+${BACKUPDIR}/${OUTPUT}.%Y%m%d-%H%M%S"`
+    fi
+}
+    
+# Apply an ex file to $OUTPUT
+apply_ex_file () {
+    exfile=$1
+
+    if [ ! -f ${exfile} ]; then
+	echo "Unable to find ex file $exfile"
+	exit 1
+    fi
+
+    echo "Applying ${exfile}"
+
+    ex -S ${exfile} ${OUTPUT}
+    
+    echo "Finished applying ${exfile}"
+}
+
+
+############################
+# MAIN PROGRAM BEGINS HERE #
+############################
+
+export PROGNAME=`basename $0`
+
+SRCFILE=$1
+OUTPUT="`basename $1`_ahcip.csv"
+
+# Running ex is a destructive process
+backup_output_file
+cp -p ${SRCFILE} ${OUTPUT}
+
+# A slash source reference like I.16.122-124/127-128
+# gets split into two lines. There can be multiple
+# slashes to a source reference, so we have to run
+# multiple times.
+counter=0
+while [ $counter -lt $MAXSLASHES ]
+do
+    apply_ex_file split-slash-refs.ex
+    counter=$((counter+1))
+done
+
+
+
+### These transforms should be done last!
+
+# Replace the stream format abbreviation for the
+# primary source reference to a CTS URN
+## FIXME - Uncomment Below
+##apply_ex_file set-source-urn.ex
+
+# Replace the stream format abbreviation of the
+# source of the commentary with a cTS URN
+# apply_ex_file set-commentary-urn.ex
