@@ -1,23 +1,19 @@
-** Tests Rob was playing with **
+** Tests **
 
-    This directory comprises tests of the modified Groovy script, and
-    some experiments on Ryan's regular expressions.
-    
-    (rbj 2014-07-14)
+    This directory comprises tests of each component of the
+    MRBTP (Modified Ryan Baumann Transformation Process)
 
 *** File Index ***
 
-.gitignore		- List of files not kept in git
+groovy-script-tests	- Test the groovy script against each
+			  input files. Outputs CSV lines into
+                          work/phase1/${srcfile}_phase1.csv
+                          
+mrbtp-tests/		- Test the MRTB script against each phase1
+                          file in work/phase1. Outputs CSV lines
+			  into work/phase2/${srcfile}_phase2.csv
 
-README.md		- This file
+neel-tests/		- Neel's test data files
 
-ex-tests/		- Experiments to figure out Ryan's regex
-                          scripts.
-
-phase1-output/          - Output from test-phase1 script, that uses
-                          the Groovy script to convert stream files to
-                          CSV files.
-
-test-phase1		- bash driver script to run the Groovy script
-                          against all the input source files in
-                          ../../src and output to phase1-output
+work/			- Working directory with output files ... not
+                          kept in git			  
