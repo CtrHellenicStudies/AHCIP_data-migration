@@ -29,7 +29,9 @@ helpmsg () {
     echo ""
     echo "Transform a CSV file for input to AHCIP"
     echo "-h or --help displays this help message"
-    echo "target-directory should be a relative or absolute path pointing to a directory to be cleaned"
+    echo "-o or --output selects outputfile. If not supplied, outputfile"
+    echo "  will be \${inputfile}_ahcip.csv"
+    echo ""
 }
 
 ##########################################################
@@ -54,8 +56,8 @@ parse_commandline () {
 		else
 		    helpmsg
 		    exit 1
-		    ;;
 		fi
+		;;
 	esac
 
 	shift
