@@ -6,7 +6,7 @@
 #  cleaned before running the script.
 #################################################
 
-SRCDIR="../../src"
+SRCDIR="../../src_txt"
 OUTPUTDIR="../work/phase1"
 CONVSCRIPT="../../scripts/streamToTab.groovy"
 
