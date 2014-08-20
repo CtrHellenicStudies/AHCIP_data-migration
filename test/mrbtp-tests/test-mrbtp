@@ -61,3 +61,5 @@ do
     popd > /dev/null
     counter=`expr 1 + $counter` 
 done
+
+echo "${counter} files converted to ${OUTPUTDIR}"
