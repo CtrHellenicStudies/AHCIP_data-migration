@@ -18,22 +18,22 @@ MRBTPSCRIPT="transform"
 ####################################################
 
 get_absolute_path () {
-    startpath=$1
+    ABSPATH=''
     if [ "X$1" = "X" ]; then
-	return ""
+	return 1
     fi
-
-    pushd `dirname ${startpath}`
-    absolute_dir=`pwd`
-    popd
-    return "${absolute_dir}/`basename ${startpath}`"
+    pushd `dirname $1` >/dev/null
+    ABSPATH=`pwd`
+    popd >/dev/null
+    ABSPATH=${ABSPATH}/`basename $1`
 }
 
 ############################
 # MAIN PROGRAM BEGINS HERE #
 ############################
 
-EXECFILE="${MRBTPDIR}/${MRBTPSCRIPT}"
+get_absolute_path "${MRBTPDIR}/${MRBTPSCRIPT}"
+EXECFILE=${ABSPATH}
 
 if [ ! -x ${EXECFILE} ]; then
     echo "Where is ${EXECFILE} ?"
@@ -41,7 +41,7 @@ if [ ! -x ${EXECFILE} ]; then
 fi
 
 if [ -d ${OUTPUTDIR} ]; then
-    rm ${OUTPUTDIR}/*
+    rm ${OUTPUTDIR}/* 2>/dev/null
 else
     mkdir -p ${OUTPUTDIR}
 fi
@@ -50,13 +50,14 @@ counter=0
 
 for srcfile in `ls $SRCDIR/*.csv`
 do
-    targfile=`echo ${srcfile} | sed 's/phase1/phase2/'`
-    targfile=`get_absolute_path ${OUTPUTDIR}/$targfile`
-    sourcefile=`get_absolute_path $srcfile`
-    pushd ${MRBTPDIR}
-    ${MRBTPSCRIPT} -o ${targfile} ${sourcefile}
-    popd
+    get_absolute_path "${srcfile}"
+    sourcefile=${ABSPATH}
+    get_absolute_path "${OUTPUTDIR}/`basename ${sourcefile}`"
+    targetfile=${ABSPATH}
+    pushd ${MRBTPDIR} > /dev/null
+    echo "Running: ${EXECFILE} -o ${targetfile} ${sourcefile}"
+    ${EXECFILE} -o ${targetfile} ${sourcefile}
+    echo "Finished run"
+    popd > /dev/null
     counter=`expr 1 + $counter` 
 done
-
-echo "${counter} files converted to ${OUTPUTDIR}"

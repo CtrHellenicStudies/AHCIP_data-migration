@@ -32,7 +32,7 @@ counter=0
 
 for srcfile in `ls $SRCDIR/*.txt`
 do
-    targfile="${OUTPUTDIR}/`basename ${srcfile}`_phase1.csv"
+    targfile="${OUTPUTDIR}/`basename ${srcfile}` | sed 's/\.txt$/.csv/'`"
     groovy ${CONVSCRIPT} ${srcfile} > ${targfile}
     counter=`expr 1 + $counter` 
 done
