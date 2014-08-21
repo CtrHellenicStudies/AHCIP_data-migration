@@ -1,5 +1,7 @@
 # Split Slash References into Multiple Lines
 
+### Slash References should only be used in the Passage Column
+
 # For Iliad and Odyssey lines
 ## Two or more slashes - split off the leftmost one ... need to repeat
 ## this one a few times to consume max number of slashes in input data

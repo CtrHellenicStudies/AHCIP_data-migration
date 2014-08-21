@@ -15,6 +15,7 @@
 #################
 # CONFIGURATION #
 #################
+DFLT_SUFFIX="_4ingest.csv"
 
 #############
 # FUNCTIONS #
@@ -73,7 +74,7 @@ parse_commandline () {
     
     if [ X${outfile} = X ]
     then
-	outfile="`basename ${SRCFILE}`_ahcip.csv"
+	outfile="`basename ${SRCFILE}`${DFLT_SUFFIX}"
     fi
     export OUTFILE="${outfile}"
 

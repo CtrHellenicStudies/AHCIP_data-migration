@@ -1,15 +1,29 @@
-# Split Comma Commentary References into Multiple Lines
+# Split Comma References into Multiple Lines
 
-# Ryans Originals
-#%s/\(.\{-}\)\(,"BA [#\-0-9]\+\), \([#\-0-9]\+\)\(.*\)/\1\2\4\r\1,"BA \3\4/
-#%s/\(.\{-}\)\(,"HN [n#\-0-9]\+\), \([n#\-0-9]\+\)\(.*\)/\1\2\4\r\1,"HN \3\4/
-#%s/\(.\{-}\)\(,"HC \d.\{-}\), \(\d.\{-}\)\(".*\)/\1\2\4\r\1,"HC \3\4/
-#%s/\(.\{-}\)\(,"HC [0-9§t()PCabc#n]\{-}\), \(.\{-}\)\(".*\)/\1\2\4\r\1,"HC \3\4/
-#%s/\(.\{-}\)\(,"PH [n#\-0-9]\+\), \([n#\-0-9]\+\)\(.*\)/\1\2\4\r\1,"PH \3\4/
-#%s/\(.\{-}\)\(,"AA [n#\-0-9]\+\), \([n#\-0-9]\+\)\(.*\)/\1\2\4\r\1,"AA \3\4/
-#%s/\(.\{-}\)\(,"ME [n#\-0-9]\+\), \([n#\-0-9]\+\)\(.*\)/\1\2\4\r\1,"ME \3\4/
+### Comma References should only be used in the Text Column but ...
 
-%s/^\(".\{-}"\),"\([A-Z][A-Z] \)\([\-0-9§t()PCabc#n]\), \([\-0-9§t()PCabc#n]\)\(.*\)/\1,"\2\3\5\r\1,"\2\4\5/
+## If there are two or more comma-separated references, split off the leftmost one.
+## This will need to be repeated a few times to consume all the commas in the input data
+%s/^\(".\{-}"\),"\([A-Z][A-Z]+ \)\([\-0-9§t()PCabc#n]\{-}\), \(.\{-}\)",\(.*\)/\1,"\2\3",\5\r\1,"\2\4",\5/
+%s/^\(".\{-}"\),"\([A-Z][A-Z]+ \)\([\-0-9§t()PCabc#n]\{-}\), \(.\{-}\)",\(.*\)/\1,"\2\3",\5\r\1,"\2\4",\5/
+%s/^\(".\{-}"\),"\([A-Z][A-Z]+ \)\([\-0-9§t()PCabc#n]\{-}\), \(.\{-}\)",\(.*\)/\1,"\2\3",\5\r\1,"\2\4",\5/
+%s/^\(".\{-}"\),"\([A-Z][A-Z]+ \)\([\-0-9§t()PCabc#n]\{-}\), \(.\{-}\)",\(.*\)/\1,"\2\3",\5\r\1,"\2\4",\5/
+%s/^\(".\{-}"\),"\([A-Z][A-Z]+ \)\([\-0-9§t()PCabc#n]\{-}\), \(.\{-}\)",\(.*\)/\1,"\2\3",\5\r\1,"\2\4",\5/
+
+# This regex will split exactly one comma-separated reference into two referencees
+%s/^\(".\{-}"\),"\([A-Z][A-Z]+ \)\([\-0-9§t()PCabc#n]\{-}\), \([\-0-9§t()PCabc#n]\{-}\)\(".*\)/\1,"\2\3\5\r\1,"\2\4\5/
+
+## Some comma references were used erroneously in LMAAIliad.docx
+## This regex pulls off the leftmost passage reference
+%s/^"\([IO]\.\d\+\.\)\([\-0-9]\+\), \(.\{-}\)",\(.*\)/"\1\2",\4\r"\1\3",\4/
+%s/^"\([IO]\.\d\+\.\)\([\-0-9]\+\), \(.\{-}\)",\(.*\)/"\1\2",\4\r"\1\3",\4/
+%s/^"\([IO]\.\d\+\.\)\([\-0-9]\+\), \(.\{-}\)",\(.*\)/"\1\2",\4\r"\1\3",\4/
+%s/^"\([IO]\.\d\+\.\)\([\-0-9]\+\), \(.\{-}\)",\(.*\)/"\1\2",\4\r"\1\3",\4/
+%s/^"\([IO]\.\d\+\.\)\([\-0-9]\+\), \(.\{-}\)",\(.*\)/"\1\2",\4\r"\1\3",\4/
+
+# This regex splits exactly one passage reference
+%s/^"\([IO]\.\d\+\.\)\([\-0-9]\+\), \([\-0-9]\+\)",\(.*\)/"\1\2",\4\r"\1\3",\4/
+
 
 # Never change below here
 wq
