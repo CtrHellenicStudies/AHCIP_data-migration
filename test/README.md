@@ -18,5 +18,5 @@ test-mrbtp/		- Test the MRTB script against each phase1
 
 neel-tests/		- Neel's test data files
 
-work/			- Working directory with output files ... not
-                          kept in git			  
+work/			- Working directory with output files - git ignores
+

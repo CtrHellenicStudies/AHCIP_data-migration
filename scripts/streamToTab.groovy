@@ -53,7 +53,8 @@ for (fName in args) {
 
 	if ( currentPsg != "" ) {
 
-	    if (l != "") {
+	    if (! (l ==~ /^[ \t]*$/ ) ) {
+		
 		// convert line to a valid CSV commentary line
 
 		// Need to surround the first token, the commentary source reference, with
