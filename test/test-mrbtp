@@ -1,0 +1,59 @@
+#! /bin/bash
+#
+# Test script to run the MRTBP script against
+#  each file in the phase1 output directory.
+#################################################
+
+#################
+# CONFIGURATION #
+#################
+
+### Set BASEDIR to the root of the git repository
+BASEDIR="/Users/rjenson/Documents/AHCIP/AHCIP_data-migration"
+
+SRCDIR="${BASEDIR}/test/work/phase1"
+OUTPUTDIR="${BASEDIR}/test/work/phase2"
+MRBTPDIR="${BASEDIR}/mrbtp"
+MRBTPSCRIPT="transform"
+
+############################
+# MAIN PROGRAM BEGINS HERE #
+############################
+
+EXECFILE="${MRBTPDIR}/${MRBTPSCRIPT}"
+
+if [ ! -x ${EXECFILE} ]; then
+    echo "Where is ${EXECFILE} ?"
+    exit 1
+fi
+
+if [ -d ${OUTPUTDIR} ]; then
+    rm ${OUTPUTDIR}/* 2>/dev/null
+else
+    mkdir -p ${OUTPUTDIR}
+fi
+
+counter=0
+
+pushd ${SRCDIR} > /dev/null
+FILENAMES=`ls *.csv`
+popd > /dev/null
+
+for filename in ${FILENAMES}
+do
+    sourcefile="${SRCDIR}/${filename}"
+    targetfile="${OUTPUTDIR}/${filename}"
+    
+    pushd ${MRBTPDIR} > /dev/null
+    if [ $? -eq 0 ]
+    then
+	echo "Running: ${EXECFILE} -o ${targetfile} ${sourcefile}"
+	${EXECFILE} -o ${targetfile} ${sourcefile}
+	echo "Finished run"
+	popd > /dev/null
+	counter=`expr 1 + $counter` 
+    fi
+
+done
+
+echo "${counter} files converted to ${OUTPUTDIR}"

@@ -1,0 +1,13 @@
+#! /bin/bash
+#  -*- mode: Shell; -*-
+#
+# Show diffs between Phase1 input and Phase2 output
+
+pushd work/phase1
+FILELIST=`ls *.csv`
+popd
+
+for file in $FILELIST
+do
+  diff -u work/phase1/${file} work/phase2/${file} | more
+done

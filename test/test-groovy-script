@@ -1,0 +1,56 @@
+#! /bin/bash
+#
+# Test script to run the Groovy script against
+#  each file in the SRC directory. Output to
+#  files labeled p1o.csv. Directory will be
+#  cleaned before running the script.
+#################################################
+
+#################
+# CONFIGURATION #
+#################
+
+### Set BASEDIR to the root of the git repository
+BASEDIR="/Users/rjenson/Documents/AHCIP/AHCIP_data-migration"
+
+SRCDIR="${BASEDIR}/src_txt"
+OUTPUTDIR="${BASEDIR}/test/work/phase1"
+CONVSCRIPT="${BASEDIR}/scripts/streamToTab.groovy"
+
+############################
+# MAIN PROGRAM BEGINS HERE #
+############################
+
+# Make sure we can run it
+which groovy >/dev/null 2>&1
+if [ $? -ne 0 ]; then
+    echo "You must install Groovy or put it in your path to run these tests."
+    exit 1
+fi
+
+if [ ! -f ${CONVSCRIPT} ]; then
+    echo "Error: Where is ${CONVSCRIPT} ?"
+    exit 1
+fi
+
+if [ -d ${OUTPUTDIR} ]; then
+    rm ${OUTPUTDIR}/*
+else
+    mkdir -p ${OUTPUTDIR}
+fi
+
+counter=0
+
+pushd ${SRCDIR} > /dev/null
+FILENAMES=`ls *.txt`
+popd > /dev/null
+
+for filename in ${FILENAMES}
+do
+    sourcefile="${SRCDIR}/${filename}"
+    targetfile="${OUTPUTDIR}/`echo ${filename} | sed 's/\.txt$/.csv/'`"
+    groovy ${CONVSCRIPT} ${sourcefile} > ${targetfile}
+    counter=`expr 1 + $counter` 
+done
+
+echo "${counter} files converted to ${OUTPUTDIR}"

@@ -5,13 +5,16 @@
 
 *** File Index ***
 
+compare			- Diff all the files from work/phase1 and
+                          work/phase2
+
 groovy-script-tests	- Test the groovy script against each
 			  input files. Outputs CSV lines into
-                          work/phase1/${srcfile}_phase1.csv
+                          work/phase1/${srcfile}
                           
-mrbtp-tests/		- Test the MRTB script against each phase1
+test-mrbtp/		- Test the MRTB script against each phase1
                           file in work/phase1. Outputs CSV lines
-			  into work/phase2/${srcfile}_phase2.csv
+			  into work/phase2/${srcfile}
 
 neel-tests/		- Neel's test data files
 
