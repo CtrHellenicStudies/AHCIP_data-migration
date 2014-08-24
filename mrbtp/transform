@@ -115,14 +115,21 @@ fi
 # Running ex is a destructive process
 cp -p ${SRCFILE} ${OUTFILE}
 
-# Split slash source references like I.16.122-124/127-128
-# If there are more than six slashes in an input line, 
-# edit the script
+# Split slash references 
 apply_ex_file split-slash-refs.ex
 
-# Split comma references in commentary clauses
-# like 
+# Split comma references
 apply_ex_file split-comma-refs.ex
+
+# Remove ff references
+apply_ex_file remove_ff_refs.ex
+
+# Try to change f references to a range
+#awk -F\, { /f.\"/   } 
+
+
+# Strip leading zeros in source references
+apply_ex_file strip_leading_zeros.ex
 
 ### These transforms should be done last!
 
