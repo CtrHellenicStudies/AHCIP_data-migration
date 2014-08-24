@@ -111,7 +111,7 @@ I.09.184-191
 PP 71-73: partially quoted and translated; analysis of Achilles as a representation of the ultimate paradigm of singers. Argues that the meaning of Patrkléēs is pertinent to the rhapsodic implications of this passage. In this Homeric image of Patroklos waiting for his turn to sing, then, we have in capsule form the esthetics of rhapsodic sequencing 
 
 I.23.340 / I.05.722
-PP 74-75: reference: analysis of kúklos as a metaphor for the sum total of Homeric poetry and the craft of the carpenter to the art of the poet. See Pindar Pythian 3.112-114, Il. IV.110, Il. XXIII.712. This traditional pattern of thinking explains the classification of the aoidós and the téktōn under the category of dēmiourgós (Od. XVII.381-385)
+PP 74-75: reference; analysis of kúklos as a metaphor for the sum total of Homeric poetry and the craft of the carpenter to the art of the poet. See Pindar Pythian 3.112-114, Il. IV.110, Il. XXIII.712. This traditional pattern of thinking explains the classification of the aoidós and the téktōn under the category of dēmiourgós (Od. XVII.381-385)
 
 I.04.110 / I.23.712
 PP 74: reference; analysis of connection between the metaphor of the master carpenter and the art of the poet and of kúklos as a metaphor for the sum total of Homeric poetry. See Il. XXIII.340, Il. V.722
@@ -150,14 +150,14 @@ PP 128: reference; discussion of accentual idiosyncrasies in Homer. See Il. III.
 I.03.020
 PP 128: quoted and translated; discussion of accentual idiosyncrasies in Homer. See Od. XV.441
 
-I.13.107 / Il.05.791
-PP 129n99; reference; analysis of Janko’s argument that the manuscript reading δ’ἑκάθεν at Il. XIII.107 is “superior” to OCT edition, which replaces δ’ἑκάθεν with δὲ ἑκάς on the basis of its older form and appearance at Il. V.791 (Janko 1990.332-334)
+I.13.107 / I.05.791
+PP 129n99: reference; analysis of Janko’s argument that the manuscript reading δ’ἑκάθεν at Il. XIII.107 is “superior” to OCT edition, which replaces δ’ἑκάθεν with δὲ ἑκάς on the basis of its older form and appearance at Il. V.791 (Janko 1990.332-334)
 
-Il.08.526
+I.08.526
 PP 133: partially quoted and translated; analysis of variant expunged by the manuscript tradition but supported by Zenodotus. Modern scholarship (Muellner 1976.58-62) supports Zenodotus by proving syntactic possibility of the formulaic line. However, neither variant has a claim to be original reading because both variants are traditional 
 PP 148: reference; analysis of van der Valk’s argument that Zenodotus’ reading ἔλπομαι εὐχόμενος is superior to the Aristarchus’ and manuscript tradition’s reading (van der Valk 1964.76). Argues that both readings have been shown to be traditional (Muellner 1976)
 
-Il.01.005
+I.01.005
 PP 134: reference; analysis of Zenodotus’ alternate reading οἰωνοῖσι τε δαῖτα (Athenaeus Epitome 12f)
 PP 134n118: discussion of Zenodotus’ athetized lines Il. I.4-5 and its relationship to alternate reading οἰωνοῖσι τε δαῖτα (Athenaeus Epitome 12f)
 PP 135n120: analysis of Zenodotus’ alternate reading οἰωνοῖσι τε δαῖτα (Athenaeus Epitome 12f).
@@ -204,7 +204,7 @@ PP 178: reference; reference to the story of Thamyris and his punishment for ins
 O.23.296 
 PP 182n107: reference to the claim of the scholia, which reports that Aristarchus and Aristophanes of Byzantium thought this line marked the end of the authentic Odyssey  
 
-23.310-343
+O.13.310-343
 PP 182n107: reference; reference to scholia, which report that Aristarchus athetized these lines. However, analysis of Aristotle’s reference to these lines shows that his copy of Homer did not stop at Od. XXIII.296
 
 I.02.409
@@ -258,8 +258,8 @@ PP 151: scholia reference; reference to Aristarchus’ apparent belief that Home
 I.18.483 (A)
 PP 151: scholia reference; reference to Zenodotus’ opinion that Homer could not have composed the Shield of Achilles
       
-I.12.022a (A) / 17.719 (A)
-PP 151; scholia reference; reference that implies the Aristarchan tradition believed Homer wrote his poems and that they were read by Hesiod
+I.12.022a (A) / I.17.719 (A)
+PP 151: scholia reference; reference that implies the Aristarchan tradition believed Homer wrote his poems and that they were read by Hesiod
 
 I.10.001 (T)
 PP 181: scholia reference; note that this book is here reported to have been composed by Homer separately and that it was later arranged by Peisistratos to fit into the Iliad
