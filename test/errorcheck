@@ -1,0 +1,112 @@
+#! /bin/bash
+# -*- mode: Shell; -*-
+#
+# Detect patterns that should have been converted in the output file
+
+OUTPUTDIR="work/phase2"
+
+pushd work/phase1 > /dev/null
+FILELIST=`ls *.csv`
+popd > /dev/null
+
+echo "Checking for unexpanded slash or comma references in column 1 ..."
+
+fail=0
+for file in $FILELIST
+do
+    awk -F, '{ print $1 }' ${OUTPUTDIR}/${file} | egrep -n '(\/|\,)'
+    if [ $? = 0 ]; then
+	echo ''
+	echo "FAIL in file: ${OUTPUTDIR}/${file} ... see above here"
+	echo "--------------------------------------------------------"
+	fail=1
+    fi
+done
+
+if [ $fail = 0 ]; then
+    echo "... no errors found."
+fi
+
+fail=0
+echo "Checking for unexpanded slash or comma references in column 2 ..."
+for file in $FILELIST
+do
+    awk -F, '{ print $2 }' ${OUTPUTDIR}/${file} | egrep -n '(\/|\,)'
+    if [ $? = 0 ]; then
+	echo ''
+	echo "FAIL in file: ${OUTPUTDIR}/${file} ... see above here"
+	echo "--------------------------------------------------------"
+	fail=1
+    fi
+done	
+
+if [ $fail = 0 ]; then
+    echo "... no errors found."
+fi
+
+fail=0
+echo "Checking for leading zeros in column 1 ..."
+for file in $FILELIST
+do
+    awk -F, '{ print $1 }' ${OUTPUTDIR}/${file} | egrep -n '\.0[0-9]+'
+    if [ $? = 0 ]; then
+	echo ''
+	echo "FAIL in file: ${OUTPUTDIR}/${file} ... see above here"
+	echo "--------------------------------------------------------"
+	fail=1
+    fi
+done	
+
+if [ $fail = 0 ]; then
+    echo "... no errors found."
+fi
+
+
+fail=0
+echo "Checking for f. and ff. source references ..."
+for file in $FILELIST
+do
+    awk -F, '{ print $1 }' ${OUTPUTDIR}/${file} | egrep -n 'ff*\.*'
+    if [ $? = 0 ]; then
+	echo ''
+	echo "FAIL in file: ${OUTPUTDIR}/${file} ... see above here"
+	echo "--------------------------------------------------------"
+	fail=1
+    fi
+done	
+
+if [ $fail = 0 ]; then
+    echo "... no errors found."
+fi
+
+fail=0
+echo "Checking for parenthetical source references ..."
+for file in $FILELIST
+do
+    awk -F, '{ print $1 }' ${OUTPUTDIR}/${file} | egrep -n ' \(.*\)'
+    if [ $? = 0 ]; then
+	echo ''
+	echo "FAIL in file: ${OUTPUTDIR}/${file} ... see above here"
+	echo "--------------------------------------------------------"
+	fail=1
+    fi
+done	
+
+if [ $fail = 0 ]; then
+    echo "... no errors found."
+fi
+
+echo "Checking for lines that don't have  four columns ..."
+
+for file in $FILELIST
+do
+    awk -F'","' '{ if (NF != 4) { print } }' ${OUTPUTDIR}/${file}
+done
+
+echo "Checking for lines where the source reference is not a URN ... "
+
+for file in $FILELIST
+do
+    awk -F, '/^[IOH]/ { print }' ${OUTPUTDIR}/${file}
+    egrep -v '^"urn' ${OUTPUTDIR}/${file}
+done	
