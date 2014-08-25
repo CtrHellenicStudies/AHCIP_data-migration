@@ -31,8 +31,8 @@ HHAphrodite.218-238
 BA 197: references; comment on hēbē in the context of immortalization (Eos’ failure to ask for it for Tithonos and Aphrodite’s “correct” wording for the concept of preservation)
 BA 200: reference; analysis of the fragmentation of the functions of Eos, here, Aphrodite’s (other and goddesses’) being called Dios thugatēr and fulfilling inherited functions of Eos (and citing Eos’ abduction of Tithonos as a precedent for her seduction of Anchises)
 
-HHAphrodite.239-end
-BA 119: reference; comparison of Anchises with Achilles and Demophon – he wins immortality neither for his kleos nor timē, but for the continuation of his progeny
+HHAphrodite.239
+BA 119: reference; comparison of Anchises with Achilles and Demophon – he wins immortality neither for his kleos nor timē, but for the continuation of his progeny [Original reference was to HHAphrodite.239-end (RBJ)]
 
 HHAphrodite.240
 BA 197: reference; comment on hēbē in the context of immortalization (Eos’ failure to ask for it for Tithonos and Aphrodite’s “correct” wording for the concept of preservation)
