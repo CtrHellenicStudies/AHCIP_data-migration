@@ -1,0 +1,21 @@
+  /Users/rjenson/Documents/AHCIP/AHCIP_data-migration/mrbtp:
+  total used in directory 160 available 91563976
+  drwxr-xr-x  19 rjenson  staff   646 Aug 25 14:55 .
+  drwxr-xr-x  15 rjenson  staff   510 Aug 23 05:29 ..
+  -rw-r--r--@  1 rjenson  staff  6148 Aug 23 05:29 .DS_Store
+  -rw-r--r--   1 rjenson  staff    65 Aug 17 19:04 .gitignore
+  -rw-r--r--   1 rjenson  staff   380 Aug 25 14:50 handle_f_refs.ex
+  -rw-r--r--   1 rjenson  staff   367 Aug 23 23:58 handle_f_refs.ex~
+  -rw-r--r--   1 rjenson  staff   159 Aug 25 14:51 move_parenthetic_notes.ex
+  -rw-r--r--   1 rjenson  staff   158 Aug 24 15:07 move_parenthetic_notes.ex~
+  -rw-r--r--   1 rjenson  staff   323 Aug 25 14:51 remove_ff_refs.ex
+  -rw-r--r--   1 rjenson  staff   322 Aug 24 15:19 remove_ff_refs.ex~
+  -rw-r--r--   1 rjenson  staff  5998 Aug 25 14:52 set-source-urn.ex
+  -rw-r--r--   1 rjenson  staff  5959 Aug 24 22:05 set-source-urn.ex~
+  -rw-r--r--   1 rjenson  staff  1685 Aug 25 14:53 split-comma-refs.ex
+  -rw-r--r--   1 rjenson  staff  1690 Aug 22 06:06 split-comma-refs.ex~
+  -rw-r--r--   1 rjenson  staff  2752 Aug 25 14:54 split-slash-refs.ex
+  -rw-r--r--   1 rjenson  staff  2771 Aug 25 14:43 split-slash-refs.ex~
+  -rw-r--r--   1 rjenson  staff   601 Aug 25 14:55 strip_leading_zeros.ex
+  -rw-r--r--   1 rjenson  staff   603 Aug 24 07:51 strip_leading_zeros.ex~
+  -rwxr-xr-x   1 rjenson  staff  3313 Aug 25 14:49 transform

@@ -1,13 +1,12 @@
-# Strip leading zeros in source references
+"  Strip leading zeros in references to source passages
 
-## Odyssey lines
+" Odyssey lines
 %s/^"O\.0*\([\-0-9]\{-}\)\.0*\([\-0-9]\{-}\)"/"O.\1.\2"/o
 %s/^"O\.0*\([0-9]\{-}\)\.0*\([0-9]\{-}\)-0*\([0-9]\{-}\)"/"O.\1.\2-\3"/
-## Iliad lines
+
+"  Iliad lines
 %s/^"I\.0*\([\-0-9]\{-}\)\.0*\([\-0-9]\{-}\)"/"I.\1.\2"/
 %s/^"I\.0*\([0-9]\{-}\)\.0*\([0-9]\{-}\)-0*\([0-9]\{-}\)"/"I.\1.\2-\3"/
 
-
-
-# Never change below here
-wq
+"  Never change below here
+:wq

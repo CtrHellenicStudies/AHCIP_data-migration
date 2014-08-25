@@ -91,11 +91,7 @@ apply_ex_file () {
 	exit 1
     fi
 
-    echo "Applying ${exfile}"
-
     ex -S ${exfile} ${OUTFILE}
-    
-    echo "Finished applying ${exfile}"
 }
 
 ############################
@@ -121,12 +117,21 @@ apply_ex_file split-slash-refs.ex
 # Split comma references
 apply_ex_file split-comma-refs.ex
 
+# Move parenthetic references
+apply_ex_file move_parenthetic_notes.ex
+
 # Remove ff references
 apply_ex_file remove_ff_refs.ex
 
-# Try to change f references to a range
-#awk -F\, { /f.\"/   } 
-
+# Fix if only three columns
+tempfile=`mktemp /tmp/${PROGNAME}.XXXXXX` || ( echo "failed to make temp file" ; exit 1 )
+awk -F'","' '{ if (NF == 3 ) { \
+               print $1 "\",\"" $2 "\",\"[MRBTP: missing]\",\"" $3 \
+	       } else { \
+	       print \
+	       } \
+          }' ${OUTFILE} > ${tempfile}
+cat ${tempfile} > ${OUTFILE}
 
 # Strip leading zeros in source references
 apply_ex_file strip_leading_zeros.ex
@@ -136,8 +141,8 @@ apply_ex_file strip_leading_zeros.ex
 # Replace the stream format abbreviation for the
 # primary source reference to a CTS URN
 ## FIXME - Uncomment Below
-##apply_ex_file set-source-urn.ex
+apply_ex_file set-source-urn.ex
 
 # Replace the stream format abbreviation of the
 # source of the commentary with a cTS URN
-# apply_ex_file set-commentary-urn.ex
+#apply_ex_file set-commentary-urn.ex

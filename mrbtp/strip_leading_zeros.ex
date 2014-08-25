@@ -1,14 +1,14 @@
-# Strip leading zeros in source references
+" Strip leading zeros in source references
 
-## Odyssey lines
+" Odyssey lines
 %s/^"O\.0*\([\-0-9]\{-}\)\.0*\([\-0-9a-z]\{-}\)"/"O.\1.\2"/
 %s/^"O\.0*\([0-9]\{-}\)\.0*\([0-9]\{-}\)-0*\([0-9a-z]\{-}\)"/"O.\1.\2-\3"/
 
-## Iliad lines
+" Iliad lines
 %s/^"I\.0*\([\-0-9]\{-}\)\.0*\([\-0-9a-z]\{-}\)"/"I.\1.\2"/
 %s/^"I\.0*\([0-9]\{-}\)\.0*\([0-9]\{-}\)-0*\([0-9a-z]\{-}\)"/"I.\1.\2-\3"/
 
-## Homeric Hymn lines
+" Homeric Hymn lines
 %s/^"HH\.0\([0-9].*\)/"HH\1/
 %s/^"\(HH\.\d\+\.\)0\+\(.*\)/"\1\2/
 %s/^"\(HH[A-Za-z0-9]\+\.\)0\+\(.*\)/"\1\2/
@@ -16,5 +16,5 @@
 
 %s/^"\(HH.\+\)-0\+\(.\{-}\)",\(.*\)/"\1-\2",\3/
 
-# Never change below here
-wq
+" Never change below here
+:wq
