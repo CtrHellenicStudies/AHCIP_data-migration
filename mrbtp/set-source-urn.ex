@@ -121,8 +121,10 @@
 %s/^"HHHeracles\.15\./"urn:cts:greekLit:tlg0013.tlg015:/
 
 " Asclepius (16)
+%s/^"HH16Asclepius\./"urn:cts:greekLit:tlg0013.tlg016:/
 %s/^"HH16\./"urn:cts:greekLit:tlg0013.tlg016:/
 %s/^"HH\.16\./"urn:cts:greekLit:tlg0013.tlg016:/
+%s/^"HHAsclepius\.16\./"urn:cts:greekLit:tlg0013.tlg016:/
 
 " the Dioscuroi (17)
 %s/^"HH17Dioskouroi\./"urn:cts:greekLit:tlg0013.tlg017:/

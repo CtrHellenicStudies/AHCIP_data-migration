@@ -136,13 +136,13 @@ cat ${tempfile} > ${OUTFILE}
 # Strip leading zeros in source references
 apply_ex_file strip_leading_zeros.ex
 
-### These transforms should be done last!
+# These transforms should be done after the
+# lines have been split and the right-hand-side of the URNs have been canonicalized
 
 # Replace the stream format abbreviation for the
 # primary source reference to a CTS URN
-## FIXME - Uncomment Below
 apply_ex_file set-source-urn.ex
 
 # Replace the stream format abbreviation of the
 # source of the commentary with a cTS URN
-#apply_ex_file set-commentary-urn.ex
+apply_ex_file set-commentary-urn.ex
