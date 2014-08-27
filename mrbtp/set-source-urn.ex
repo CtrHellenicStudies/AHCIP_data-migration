@@ -1,20 +1,25 @@
 " Transformation of Primary Source to CTS URNs
+" - Also expands range references in Iliad and Odyssey
+" - Range refs in Homeric Hymns should not need to expand
 
 " Iliad
 %s/^"I\./"urn:cts:greekLit:tlg0012.tlg001:/
 
 " Expand Iliad range references
-%s/greekLit:tlg0012.tlg001:\(\d\+\)\.\(\d\+\)-\(\d\+\)/greekLit:tlg0012.tlg001:\1.\2-\1.\3/
+%s/greekLit:tlg0012.tlg001:\(\d\+\)\.\([0-9a-z]\+\)-\([0-9a-z]\+\)/greekLit:tlg0012.tlg001:\1.\2-\1.\3/
 
 " Odyssey
 %s/^"O\./"urn:cts:greekLit:tlg0012.tlg002:/
 
 " Expand Odyssey range references
-%s/greekLit:tlg0012.tlg002:\(\d\+\)\.\(\d\+\)-\(\d\+\)/greekLit:tlg0012.tlg002:\1.\2-\1.\3/
+%s/greekLit:tlg0012.tlg002:\(\d\+\)\.\([0-9a-z]\+\)-\([0-9a-z]\+\)/greekLit:tlg0012.tlg002:\1.\2-\1.\3/
 
 " Homeric Hymns
 " - Note that some of these patterns have never been seen in existing
 " - input data files, but are included for completeness
+" - 
+" - Also note that the regexes for the five that don't get numbers go
+" - at the end.
 
 " Dionysus / Dione (1)
 %s/^"HH1Dione\./"urn:cts:greekLit:tlg0013.tlg001:/
@@ -29,32 +34,24 @@
 %s/^"HH2\./"urn:cts:greekLit:tlg0013.tlg002:/
 %s/^"HH\.2\./"urn:cts:greekLit:tlg0013.tlg002:/
 %s/^"HHDemeter\.2\./"urn:cts:greekLit:tlg0013.tlg002:/
-" No numeric reference = 2
-%s/^"HHDemeter\./"urn:cts:greekLit:tlg0013.tlg002:/
 
 " Apollo (3)
 %s/^"HH3Apollo\./"urn:cts:greekLit:tlg0013.tlg003:/
 %s/^"HH3\./"urn:cts:greekLit:tlg0013.tlg003:/
 %s/^"HH\.3\./"urn:cts:greekLit:tlg0013.tlg003:/
 %s/^"HHApollo\.3\./"urn:cts:greekLit:tlg0013.tlg003:/
-" No numeric reference = 3
-%s/^"HHApollo\./"urn:cts:greekLit:tlg0013.tlg003:/
 
 " Hermes (4)
 %s/^"HH4Hermes\./"urn:cts:greekLit:tlg0013.tlg004:/
 %s/^"HH4\./"urn:cts:greekLit:tlg0013.tlg004:/
 %s/^"HH\.4\./"urn:cts:greekLit:tlg0013.tlg004:/
 %s/^"HHHermes\.4\./"urn:cts:greekLit:tlg0013.tlg004:/
-" No numeric reference = 4
-%s/^"HHHermes\./"urn:cts:greekLit:tlg0013.tlg004:/
 
 " Aphrodite (5)
 %s/^"HH5Aphrodite\./"urn:cts:greekLit:tlg0013.tlg005:/
 %s/^"HH5\./"urn:cts:greekLit:tlg0013.tlg005:/
 %s/^"HH\.5\./"urn:cts:greekLit:tlg0013.tlg005:/
 %s/^"HHAphrodite\.5\./"urn:cts:greekLit:tlg0013.tlg005:/
-" No numeric reference = 5
-%s/^"HHAphrodite\./"urn:cts:greekLit:tlg0013.tlg005:/
 
 " Aphrodite (6)
 %s/^"HH6Aphrodite\./"urn:cts:greekLit:tlg0013.tlg006:/
@@ -244,6 +241,26 @@
 %s/^"HH33\./"urn:cts:greekLit:tlg0013.tlg033:/
 %s/^"HH\.33\./"urn:cts:greekLit:tlg0013.tlg033:/
 %s/^"HH33Dioskouroi\./"urn:cts:greekLit:tlg0013.tlg033:/
+
+
+" If no number is given, we have some defaults
+
+" Demeter with no number = 2
+%s/^"HHDemeter\./"urn:cts:greekLit:tlg0013.tlg002:/
+
+" Apollo with no number = 3
+%s/^"HHApollo\./"urn:cts:greekLit:tlg0013.tlg003:/
+
+" Hermes with no number = 4
+%s/^"HHHermes\./"urn:cts:greekLit:tlg0013.tlg004:/
+
+" Aphrodite with no number = 5
+%s/^"HHAphrodite\./"urn:cts:greekLit:tlg0013.tlg005:/
+
+" Dionysus / Dione with no number = 7
+%s/^"HHDione\./"urn:cts:greekLit:tlg0013.tlg007:/
+%s/^"HHDionysus\./"urn:cts:greekLit:tlg0013.tlg007:/
+
 
 " Never change below here
 :wq

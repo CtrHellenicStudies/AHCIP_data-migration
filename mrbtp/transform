@@ -146,3 +146,6 @@ apply_ex_file set-source-urn.ex
 # Replace the stream format abbreviation of the
 # source of the commentary with a cTS URN
 apply_ex_file set-commentary-urn.ex
+
+# Clean commentary references
+apply_ex_file clean-commentary-refs.ex

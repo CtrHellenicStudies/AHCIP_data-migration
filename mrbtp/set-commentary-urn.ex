@@ -24,6 +24,8 @@
 " Pindar's Homer
 %s/^"\(.\{-\}\)","PH /"\1","urn:cts:ahcip:GregoryNagy.PindarsHomer:/
 
+" Poetry as Performance
+%s/^"\(.\{-\}\)","PP /"\1","urn:cts:ahcip:GregoryNagy.PoetryAsPerformance:/
 
 " Do not delete the following line
 :wq
