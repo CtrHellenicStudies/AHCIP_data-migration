@@ -182,7 +182,7 @@ I.03.018b1 (scholia)
 HC P(t)25(P§151): part of verse quoted as lēmma, scholia quoted and translated; example of the reinterpretation of Aristarchus’ descriptions as prescriptions by later Aristarcheans
 
 I.03.018b2 (scholia)
-HC P(26)(P§151): scholia quoted and translated; example of the reinterpretation of Aristarchus’ descriptions as prescriptions by later Aristarcheans
+HC P(t)26(P§151): scholia quoted and translated; example of the reinterpretation of Aristarchus’ descriptions as prescriptions by later Aristarcheans
 
 I.03.035
 HC 4(t)9(4§39): reference to verse, scholia quoted and translated; in a list of scholia exemplifying the relationship of Koine and Attic
@@ -249,7 +249,7 @@ HC P§48n: reference to verse and scholia; in the list of West’s (2001:40n33) 
 
 I.06.289
 HC 4§195: reference; comment on pan-poikilos, epithet of peploi woven by Phoenician women the most beautiful of which is presented to Athena as an offering, as ‘pattern-woven’
-HC §195n: reference; comment on the variant readings for the verse (pan-poikila describing erga or pan-poikiloi describing peploi)
+HC 4§195n: reference; comment on the variant readings for the verse (pan-poikila describing erga or pan-poikiloi describing peploi)
 
 I.06.293-295
 HC 4§195: reference; comment on pan-poikilos, epithet of peploi woven by Phoenician women the most beautiful of which is presented to Athena as an offering, as ‘pattern-woven’
