@@ -25,7 +25,7 @@ PH 238: reference; comment on aitios in the context of discussion of the theme o
 I.01.412
 PH 254: reference; comment on atē regarding Agamemnon’s dishonoring Achilles
 
-I.01.603-004
+I.01.603-604
 PH 351: reference; discussion of the differentiation of the chorus leader from the singers and dancers with reference to Apollo and how this is done in his case
 
 I.2.046
@@ -59,7 +59,7 @@ PH 222: reference; discussion of transition from prooimion to narrative proper b
 I.02.557-558
 PH 320: reference; comment on Solon’s citing the verses in the context of a territorial dispute between Athens and Megara, and the use of myths as evidence, poetry as a source of authority
 
-I.02.557-70
+I.02.557-570
 PH 73: reference; comparison with Hesiod F 204.44-51 in context of discussing textual fixation
 
 I.02.594-600
@@ -84,7 +84,7 @@ PH 307: reference; discussion of the theme of “the beginning of misfortunes”
 I.05.710
 PH 251: reference; discussion of role and meaning of dēmos, in Homeric diction as ‘district’ (as here)
 
-I.06.289-92
+I.06.289-292
 PH 420: reference; discussion of the variability of Helen’s story and Herodotus’ using that in his argument that the poet of Cypria is not Homer
 
 I.06.382
