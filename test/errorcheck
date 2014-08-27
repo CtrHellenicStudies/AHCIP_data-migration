@@ -14,7 +14,7 @@ echo "Checking for unexpanded slash or comma references in column 1 ..."
 fail=0
 for file in $FILELIST
 do
-    awk -F, '{ print $1 }' ${OUTPUTDIR}/${file} | egrep -n '(\/|\,)'
+    sed 's/","/%/g' ${OUTPUTDIR}/${file} | awk -F\% '{ print $1 }' | egrep -n '(\,|\/)'    
     if [ $? = 0 ]; then
 	echo ''
 	echo "FAIL in file: ${OUTPUTDIR}/${file} ... see above here"
@@ -31,7 +31,7 @@ fail=0
 echo "Checking for unexpanded slash or comma references in column 2 ..."
 for file in $FILELIST
 do
-    awk -F, '{ print $2 }' ${OUTPUTDIR}/${file} | egrep -n '(\/|\,)'
+    sed 's/","/%/g' ${OUTPUTDIR}/${file} | awk -F\% '{ print $2 }' | egrep -n '(\,|\/)'
     if [ $? = 0 ]; then
 	echo ''
 	echo "FAIL in file: ${OUTPUTDIR}/${file} ... see above here"
